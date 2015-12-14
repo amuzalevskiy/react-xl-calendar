@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <style>
+        .react-oro-calendar {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .switcher__item {
+            padding: 5px;
+            display: inline-block;
+        }
+        .switcher__item:hover {
+            background: gray;
+        }
+        .switcher__item_selected {
+            background: lightblue;
+        }
+        .day-grid__event {
+            box-sizing: border-box;
+            border: 1px blueviolet solid;
+            font-size: 13px;
+            font-family: sans-serif;
+            outline: 1px solid #FFF;
+            overflow: hidden;
+        }
+        .day-grid__event:hover {
+            box-shadow: 1px 1px 7px rgba(0,0,0,0.4);
+            outline: none;
+        }
+        .day-grid__event_starts-before {
+            border-top: none;
+        }
+        .day-grid__event_ends-after {
+            border-bottom: none;
+        }
+        .day-grid {
+            border: 1px #ddd solid;
+            background: url("./bg.png") repeat;
+            height: calc((42px * 24) - 1px);
+            background-position: left -1px;
+        }
+        .day-grid__relative-wrapper {
+            position: relative;
+            width: calc(100% - 50px);
+            left: 50px;
+        }
+        .event-line__projection {
+            width: 100%;
+            opacity: 0.7;
+        }
+        .event-lines, .event-line {
+            position: absolute;
+            height: 100%;
+            top: 0;
+            width: 100%;
+            border-radius: 3px;
+        }
+        .hour-line{
+            position: absolute;
+            border: 1px #ddd solid;
+            background: url("./bg.png") repeat;
+            height: calc((42px * 24) - 1px);
+            background-position: left -1px;
+            width: 50px;
+        }
+        .hour-line__hour {
+            height: 42px;
+            padding-top: 3px;
+            box-sizing: border-box;
+        }
+        .hourly-grid___day {
+            position: absolute;
+            border-top: none;
+            border-bottom: none;
+            box-sizing: border-box;
+        }
+        .hourly-grid {
+            right: 5px;
+            position: absolute;
+            width: calc(100% - 55px);
+        }
+        .hourly-grid___day .day-grid__relative-wrapper {
+            width: 100%;
+            left: 0;
+        }
+        .horizontal-event {
+            border: solid 1px blue;
+            position: absolute;
+            border-radius: 3px;
+            height: 18px;
+            line-height: 16px;
+            box-sizing: border-box;
+        }
+        .horizontal-events-line {
+            min-height: 19px;
+            position: relative;
+            overflow: hidden;
+        }
+        .horizontal-events-line-wrapper {
+            border: solid 1px #D3D3D3;
+            width: calc(100% - 41px);
+            margin-left: 37px;
+            padding-bottom: 8px;
+            margin-bottom: 5px;
+            background: #FFF;
+        }
+        .week-view {
+            width: 100%;
+            background: #f5f5f5;
+            border: lightgray;
+            overflow: hidden;
+            padding: 5px 5px 1015px 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="example"></div>
+    <script src="./bundle.js"></script>
+</body>
+</html>
